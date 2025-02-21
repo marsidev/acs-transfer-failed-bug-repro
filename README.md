@@ -25,8 +25,8 @@ When attempting to play a prompt after a call transfer fails, an error occurs in
 
 1. Make a POST request to initiate the outbound call:
    ```
-   POST http://localhost:8080/api/calls
-   Content-Type: application/json
+   POST http://localhost:8080/api/outboundCall
+	 Content-Type: application/json
 
    {
      "phoneNumber": "+1234567890"  // The phone number to call
@@ -40,7 +40,7 @@ You can use tools like Postman, curl, or any HTTP client to make the POST reques
 
 Example using curl:
 ```bash
-curl -X POST http://localhost:8080/api/calls \
+curl -X POST http://localhost:8080/api/outboundCall \
   -H "Content-Type: application/json" \
   -d '{"phoneNumber": "+1234567890"}'
 ```
